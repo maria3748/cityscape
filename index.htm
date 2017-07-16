@@ -27,7 +27,7 @@
 	var ix2,iy2,iwidth2,ilength2;
 	var pixColor1,pixColor2,pixColor3;
 	var isheight,iswidth;
-	var myVar,istran,ismax;
+	var myVar,istrans;
 
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
@@ -57,8 +57,7 @@
 	ix1=Math.round((Math.random() * iswidth) + 1); 
 	iy1=Math.round((Math.random() * isheight) + 1); 
         context.fillStyle = pixColor1;
-	//ismax=800;
-        context.fillRect(ix, iy, 200, 800);
+	context.fillRect(ix, iy, 60, 800);
         context.fillStyle = pixColor2;
         context.fillRect(ix1, iy1, 20, 20);	
 	ix2=Math.round((Math.random() * iswidth) + 1); 
