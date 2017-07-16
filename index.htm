@@ -45,11 +45,11 @@
 	iga=Math.round((Math.random() * 255) + 1); 
 	iba=Math.round((Math.random() * 255) + 1);
 	istrans=Math.round(Math.random());
-	if (istrans>>0.5) {istrans=1;}
+	if (istrans>0.5) {istrans=1;}
 	else{istrans=0.5;}
 	pixColor1="rgba("+ir+","+ig+","+ib+","+istrans+")";
 	istrans=Math.round(Math.random());
-	if (istrans>>0.5) {istrans=1;}
+	if (istrans>0.5) {istrans=1;}
 	else{istrans=0.5;}
 	pixColor2="rgba("+ira+","+iba+","+iga+","+istrans+")";
 	ix=Math.round((Math.random() * iswidth) + 1); 
@@ -57,7 +57,7 @@
 	ix1=Math.round((Math.random() * iswidth) + 1); 
 	iy1=Math.round((Math.random() * isheight) + 1); 
         context.fillStyle = pixColor1;
-	context.fillRect(ix, iy, 60, 800);
+	context.fillRect(ix, iy, 40, 800);
         context.fillStyle = pixColor2;
         context.fillRect(ix1, iy1, 20, 20);	
 	ix2=Math.round((Math.random() * iswidth) + 1); 
