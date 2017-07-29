@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="578" height="300"></canvas>
+    <body onload="nowredraw()">
+    <script>
+
+   	var canvas = document.getElementById('myCanvas');
+      	var context = canvas.getContext('2d');
+
+      	function nowredraw() {
+        var context = canvas.getContext('2d');
+	var ir,ig,ib,iz;
+	var ira,iga,iba,iza;
+	var irb,igb,ibb,izb;
+	var ix,iy;
+	var ix1,iy1;
+	var ix2,iy2;
+	var ix3,iy3,ix4,iy4;
+	var pixColor1,pixColor2,pixColor3, pixColor4;
+	var isheight,iswidth;
+	var myVar,istrans;
+
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+     	isheight=canvas.height;
+     	iswidth=canvas.width ;
+
+	for (var i=0;i<100;i+=1){
+	ir=Math.round((Math.random() * 255) + 1); 
+	ig=Math.round((Math.random() * 255) + 1); 
+	ib=Math.round((Math.random() * 255) + 1);
+	istrans=Math.round(Math.random());
+	if (istrans>>0.5) {istrans=1;}
+	else{istrans=0.5;}
+	pixColor1="rgba("+ir+","+ig+","+ib+","+istrans+")";
+	ix=Math.round((Math.random() * iswidth) + 1); 
+	iy=Math.round((Math.random() * isheight) + 1); 
+       	context.fillStyle = pixColor1;
+	context.fillRect(ix, iy, 40, 800);
+
+	ira=Math.round((Math.random() * 255) + 1); 
+	iga=Math.round((Math.random() * 255) + 1); 
+	iba=Math.round((Math.random() * 255) + 1);
+	istrans=Math.round(Math.random());
+	if (istrans>>0.5) {istrans=1;}
+	else{istrans=0.5;}
+	pixColor2="rgba("+ira+","+iga+","+iba+","+istrans+")";
+	ix1=Math.round((Math.random() * iswidth) + 1); 
+	iy1=Math.round((Math.random() * isheight) + 1); 
+       	context.fillStyle = pixColor2;
+     	context.fillRect(ix1, iy1, 20, 20);
+	
+	ix2=Math.round((Math.random() * iswidth) + 1); 
+	iy2=Math.round((Math.random() * isheight) + 1); 
+	irb=Math.round((Math.random() * 255) + 1); 
+	igb=Math.round((Math.random() * 255) + 1); 
+	ibb=Math.round((Math.random() * 255) + 1);
+	pixColor3="rgba("+irb+","+igb+","+ibb+","+0.5+")";
+	context.beginPath();
+	context.arc(ix2, iy2, 100, 0, 2 * Math.PI);
+	context.fillStyle = pixColor3;
+	context.fill();
+
+	ix3=Math.round((Math.random() * iswidth) + 1); 
+	iy3=Math.round((Math.random() * isheight) + 1); 
+	irc=Math.round((Math.random() * 255) + 1); 
+	igc=Math.round((Math.random() * 255) + 1); 
+	ibc=Math.round((Math.random() * 255) + 1);
+	pixColor3="rgba("+irc+","+igc+","+ibc+","+0.5+")";
+	context.beginPath();
+	context.moveTo(ix3,iy3);
+	context.lineTo(ix3+100, iy3+200);
+	context.lineTo(ix3-100, iy3+200);
+	context.closePath();
+	context.fill();
+
+
+
+	//context.font = "90px Arial";
+	ix4=Math.round((Math.random() * iswidth) + 1); 
+	iy4=Math.round((Math.random() * isheight) + 1); 
+	context.fillText("Hello World!", ix4, iy4);
+	irc=Math.round((Math.random() * 255) + 1); 
+	igc=Math.round((Math.random() * 255) + 1); 
+	ibc=Math.round((Math.random() * 255) + 1);
+	pixColor4="rgba("+irc+","+igc+","+ibc+","+1+")";
+
+
+	}}
+   
+
+      	canvas.addEventListener('mousedown', function(evt) {
+	nowredraw();}, false);
+
+
+	
+
+
+    </script>
+  </body>
+</html>
+
+
+</html>
